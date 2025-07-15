@@ -1,7 +1,10 @@
 plugins {
     id("java")
+    id ("application")
 }
-
+application {
+    mainClass = 'org.gradle.sample.Main'
+}
 group = "org.example"
 version = "1.0-SNAPSHOT"
 
