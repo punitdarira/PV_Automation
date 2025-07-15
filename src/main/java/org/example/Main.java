@@ -20,11 +20,12 @@ import org.apache.commons.lang3.StringUtils;
 //chrome.exe --remote-debugging-port=9222 --user-data-dir=C:\Users\Owner\Desktop\chrome-user-data-dir1
 public class Main {
     public static void main(String[] args) throws Exception {
-        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver\\chromedriver-win64\\chromedriver.exe");
+
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Administrator\\Desktop\\PV_Automation\\chromedriver.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setExperimentalOption("debuggerAddress", "localhost:9222");
 
-        FileInputStream file = new FileInputStream("C:\\PVAutomation\\PV.xlsx");
+        FileInputStream file = new FileInputStream("C:\\Users\\Administrator\\Desktop\\PV_Automation\\PV.xlsx");
         XSSFWorkbook workbook = new XSSFWorkbook(file);
         XSSFSheet sheet = workbook.getSheetAt(0);
         Iterator<Row> rowIterator = sheet.iterator();
